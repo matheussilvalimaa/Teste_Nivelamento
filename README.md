@@ -73,6 +73,8 @@ Desenvolver uma API que realiza uma busca textual na lista de cadastros de opera
 - `Teste de API/server.py` – Implementa o servidor Flask com a rota `/buscar`.
 - `Teste de API/index.html` – Interface web em Vue.js para realizar as buscas e exibir os resultados.
 
+**Importante:**
+Para executar e testar a API, deve inicializar o arquivo server.py para conseguir fazer requisições.
 ---
 
 ## Pré-Requisitos
