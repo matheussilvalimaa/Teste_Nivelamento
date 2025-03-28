@@ -75,6 +75,7 @@ Desenvolver uma API que realiza uma busca textual na lista de cadastros de opera
 
 **Importante:**  
 Para executar e testar a API, deve inicializar o arquivo server.py para conseguir fazer requisições.
+
 ---
 
 ## Pré-Requisitos
