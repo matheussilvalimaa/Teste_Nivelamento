@@ -9,22 +9,25 @@ Este repositório contem uma série de testes que visam demonstrar conhecimentos
 
 Os dois primeiros testes estão em arquivos .py na raiz do projeto, enquanto os outros dois estão em suas respectivas pastas.
 
-## Estrutura do Repositório
+# Estrutura do Repositório
 
+```bash
 ├── Teste de API/
-│   ├── server.py               # Servidor Flask
-│   ├── index.html              # Interface Vue.js (página de busca)
-│   |── Relatorio_cadop.csv     # Arquivo CSV das operadoras
-|   |── API_Operadoras.postman.json     # Coleção criada no Postman
+│   ├── server.py                  # Servidor Flask
+│   ├── index.html                 # Interface Vue.js (página de busca)
+│   ├── Relatorio_cadop.csv        # Arquivo CSV das operadoras
+│   ├── API_Operadoras.postman.json # Coleção criada no Postman
+│   └── ...
 ├── Teste de Banco de Dados/
-│   ├── converter.py            # Script Python para converter vírgulas do CSV em pontos para leitura em SQL
-|   |── criar_db.sql            # Script SQL para criar o Banco de Dados
-|   |── criar_tabela.sql        # Script SQL para criar as tabelas propostas no Banco de Dados
-|   |── importar_dados.sql      # Script SQL para importar os dados dos arquivos .csv para as tabelas
-│   ├── README.md               # Instruções específicas para o Teste de Banco de Dados
-├── extrair_pdf.py             # Script para extrair dados do Anexo I (Teste 2)
-├── baixar_anexos.py           # Script para baixar anexos (Teste 1)
-├── README.md                   # (Este arquivo)
+│   ├── converter.py               # Script Python para converter dados do CSV em formato SQL
+│   ├── criar_db.sql               # Script SQL para criar o Banco de Dados
+│   ├── criar_tabela.sql           # Script SQL para criar as tabelas
+│   ├── importar_csv.sql           # Script SQL para importar os dados
+│   ├── README.md                  # Instruções específicas para o Teste de Banco de Dados
+├── extrair_pdf.py                 # Script Python para extrair dados do Anexo I (Teste 2)
+├── baixar_anexos.py               # Script para baixar anexos (Teste 1)
+└── README.md                      # (Este arquivo)
+```
 
 ---
 
