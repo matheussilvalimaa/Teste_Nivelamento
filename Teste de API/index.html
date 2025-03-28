@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de API</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Busca de Operadoras</h1>
+    </header>
+    <main id="app">
+        <section aria-label="Busca">
+            <form @submit.prevent>
+                <label for="search-input" class="visually-hidden">
+                    Buscar operadoras
+                </label>
+                <input
+                    id="search-input"
+                    type="text"
+                    v-model="searchQuery"
+                    placeholder="Digite sua busca"
+                    @input="search"
+                />
+            </form>
+        </section>
+        <section aria-label="Resultados da busca">
+            <ul>
+                <li v-for="(operadora, index) in results" :key="index">
+                  <strong>{{ operadora.razao_social }}</strong><br>
+                  CNPJ: {{ formatCNPJ(operadora.cnpj) }}<br>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Matheus da Silva Lima - Teste de API</p>
+    </footer>
+    <script>
+        const { createApp } = Vue;
+        createApp({
+          data() {
+            return {
+              query: '',
+              results: []
+            };
+          },
+          methods: {
+            formatCNPJ(cnpj) {
+              return cnpj.replace(/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/, '$1.$2.$3/$4-$5');
+            },
+            formatPhone(ddd, phone) {
+              return `(${ddd}) ${phone.toString().replace(/(\d{4})(\d{4})/, '$1-$2')}`;
+            },
+            async buscar() {
+              if (this.query.trim() === '') {
+                this.results = [];
+                return;
+              }
+              try {
+                const response = await axios.get('http://localhost:5000/search', {
+                  params: { q: this.query }
+                });
+                console.log("Retorno da API em quantidade:", response.data.length);
+                console.log("Dados da API:", response.data)
+                this.results = response.data;
+              } catch (error) {
+                console.error("Erro na busca:", error);
+              }
+            }
+          }
+        }).mount('#app');
+      </script>
+</body>
+</html>

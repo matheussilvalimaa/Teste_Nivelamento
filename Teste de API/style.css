@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header,
+footer {
+    background: #f8f8f8;
+    padding: 1em;
+    text-align: center;
+}
+
+main {
+    padding: 1em;
+    max-width: 800px;
+    margin: auto;
+}
+
+section {
+    margin-bottom: 2em;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 0.5em;
+    font-size: 1em;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+}

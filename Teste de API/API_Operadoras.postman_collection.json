@@ -1,0 +1,69 @@
+{
+	"info": {
+		"_postman_id": "08ef097a-2d5d-4eae-a563-e70abbd2c8f8",
+		"name": "API_Operadoras",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43567903"
+	},
+	"item": [
+		{
+			"name": "Request Saude",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/buscar?q=saude",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"buscar"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "saude"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Request Hospital",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/buscar?q=hospital",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"buscar"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "hospital"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

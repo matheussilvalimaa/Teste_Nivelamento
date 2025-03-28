@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Teste Vue JSON</title>
+  <!-- Importa Vue 3 via CDN -->
+  <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+  <div id="app">
+    <ul>
+      <!-- Faz um loop nos itens do array "results" -->
+      <li v-for="(operadora, index) in results" :key="index">
+        <!-- Exibe cada objeto formatado com JSON.stringify, dentro de <pre> -->
+        <pre>{{ JSON.stringify(operadora, null, 2) }}</pre>
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    const { createApp } = Vue;
+    createApp({
+      data() {
+        return {
+          // Exemplo fixo de dados para testar
+          results: [
+            {
+              cnpj: "00.000.000/0001-00",
+              razao_social: "Operadora Teste 1",
+              registro_ans: "12345"
+            },
+            {
+              cnpj: "11.111.111/0001-11",
+              razao_social: "Operadora Teste 2",
+              registro_ans: "67890"
+            }
+          ]
+        };
+      }
+    }).mount('#app');
+  </script>
+</body>
+</html>
